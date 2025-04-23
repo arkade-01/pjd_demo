@@ -65,18 +65,18 @@ const ProductPage: React.FC = () => {
 
   const product: ProductData = {
     name: "Item 7 Meal with Drink",
-    price: 1.00,
+    price: 4.00,
     rating: 4.8,
     reviewCount: 237,
     condition: "New",
     description: "Tasty and delicious meal with a refreshing drink. Perfect for any occasion.",
     inStock: 15,
     flavors: [
-      { name: 'Berry Blast', color: '#9b2d74', price: 1.00 },
-      { name: 'Tropical Sunrise', color: '#ff9939', price: 1.00 },
-      { name: 'Green Apple', color: '#7fba44', price: 1.00 },
-      { name: 'Blue Raspberry', color: '#0078d7', price: 1.00 },
-      { name: 'Citrus Punch', color: '#fbca03', price: 1.00 }
+      { name: 'Berry Blast', color: '#9b2d74', price: 4.00 },
+      { name: 'Tropical Sunrise', color: '#ff9939', price: 4.00 },
+      { name: 'Green Apple', color: '#7fba44', price: 4.00 },
+      { name: 'Blue Raspberry', color: '#0078d7', price: 4.00 },
+      { name: 'Citrus Punch', color: '#fbca03', price: 4.00 }
     ],
     sizes: ['Small', 'Regular', 'Large'],
     delivery: {
