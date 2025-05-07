@@ -20,15 +20,11 @@ export interface PaymentResponse {
 }
 
 export interface PaymentRequest {
+  userId: string;
   amount: string;
   network: string;
   token: string;
-  recipient: {
-    institution: string;
-    accountIdentifier: string;
-    accountName: string;
-    memo: string;
-  };
+  memo: string;
   reference: string;
 }
 
@@ -38,6 +34,7 @@ const paymentAPI = axios.create({
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
+    'x-api-key': '4u1u4j5djzpbwl1lfpd7ly48pb29ni'
   }
 });
 
@@ -65,15 +62,11 @@ export const createPaymentOrder = async (productInfo: {
 
     // Prepare request body
     const requestBody: PaymentRequest = {
+      "userId": "680a495518220e7e4e07114c",
       "amount": productInfo.price,
       "network": "base",
       "token": "USDC",
-      "recipient": {
-        "institution": "KUDANGPC",
-        "accountIdentifier": "2068001238",
-        "accountName": "BILIAMIN, AYOMIDE NOAH",
-        "memo": memo
-      },
+      "memo": memo,
       "reference": reference
     };
 
