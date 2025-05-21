@@ -26,11 +26,12 @@ export interface PaymentRequest {
   token: string;
   memo: string;
   reference: string;
+  // returnAddress: string;
 }
 
 // Create payment API client
 const paymentAPI = axios.create({
-  baseURL: "https://arkpay.onrender.com/v1/api/payment",
+  baseURL: "http://localhost:3000/v1/api/payments",
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
@@ -62,12 +63,12 @@ export const createPaymentOrder = async (productInfo: {
 
     // Prepare request body
     const requestBody: PaymentRequest = {
-      "userId": "680a495518220e7e4e07114c",
-      "amount": productInfo.price,
-      "network": "base",
-      "token": "USDC",
-      "memo": memo,
-      "reference": reference
+      userId: "680a495518220e7e4e07114c",
+      amount: productInfo.price,
+      token: "USDC",
+      network: "base",
+      memo: memo,
+      reference: reference,
     };
 
     console.log("Payment Request:", JSON.stringify(requestBody, null, 2));
