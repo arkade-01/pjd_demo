@@ -31,12 +31,12 @@ export interface PaymentRequest {
 
 // Create payment API client
 const paymentAPI = axios.create({
-  baseURL: "http://localhost:3000/v1/api/payments",
+  baseURL: "https://arkpay.onrender.com/v1/api/payments",
   timeout: 30000,
   headers: {
-    'Content-Type': 'application/json',
-    'x-api-key': '4u1u4j5djzpbwl1lfpd7ly48pb29ni'
-  }
+    "Content-Type": "application/json",
+    "x-api-key": "eekfv1i8ye53orfmtvpmbx0l4t7euj",
+  },
 });
 
 /**
